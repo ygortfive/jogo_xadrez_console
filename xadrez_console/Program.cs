@@ -39,8 +39,11 @@ namespace xadrez_console
                     catch(TabuleiroException e)
                     {
                         Console.WriteLine();
-                        Console.WriteLine(e.Message);
-                        Console.Write("Tecle enter para repetir a jogada!");
+                        Console.WriteLine(e.Message);                        
+                        ConsoleColor aux = Console.ForegroundColor;
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write("Tecle enter para repetir a jogada!"); ;
+                        Console.ForegroundColor = aux;
                         Console.ReadLine();
                     }
                 }
